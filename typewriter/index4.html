@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://rawgit.com/mehaase/js-typewriter/master/example3-typewriter/index.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Example 3: Typewriter</title>
+    <link href="./index_files/css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: MeisterWriter;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        #typewriter {
+            white-space: pre;
+        }
+    </style>
+    <script src="./index_files/jquery-1.10.1.min.js"></script>
+    <script src="./index_files/typewriter.js"></script>
+    <script src="./index_files/animate.js"></script>
+    <script src="./index_files/howler.min.js"></script>
+</head>
+<body style="">
+<button id="playButton">Play Animation</button>
+
+<p id="typewriter"></p>
+
+<script>
+    // Audio files are royalty-free from http://www.soundjay.com/typewriter-sounds.html.
+
+
+    $('#playButton').click(function () {
+        var carriageReturnSound = new Howl({
+            src: ['return.mp3'],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokeSound1 = new Howl({
+            src: ['taste1.mp3'],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokeSound2 = new Howl({
+            src: ['taste2.mp3'],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokeSound3 = new Howl({
+            src: ['taste3.mp3'],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokeSound4 = new Howl({
+            src: ['taste4.mp3'],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokeSound5 = new Howl({
+            src: ['taste5.mp3',],
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+        var keystrokes = [keystrokeSound1, keystrokeSound2, keystrokeSound3, keystrokeSound4, keystrokeSound5];
+        var endlineSound = new Howl({
+            src: ['endline.mp3',],
+            preload: true,
+            autoSuspend: false
+        });
+        var spaceSound = new Howl({
+            src: ['leertaste1.mp3',],
+            preload: true,
+            autoSuspend: false
+        });
+        var currentSound = null;
+
+        function playSound(character, nextCharacter, lastCharacter) {
+            var nextSound = null;
+
+            if (character == "\n") {
+                carriageReturnSound.play();
+            } else if (character == "\b") {
+                spaceSound.play();;
+            } else if (character == " ") {
+                spaceSound.play();
+            } else {
+                if (nextCharacter == "\n") {
+                    endlineSound.play();;
+                } else {
+                    keystrokes[Math.round(Math.random() * 4)].play();;
+                }
+            }
+        }
+
+        var typewriter = new Typewriter($("#typewriter"));
+
+        typewriter.setCaret("");
+        typewriter.setCaretPeriod(0);
+        typewriter.setDelay(200, 50);
+        typewriter.setCharacterCallbackPre(playSound);
+        animate(typewriter);
+    });
+</script>
+
+
+</body>
+</html>

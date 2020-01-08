@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://rawgit.com/mehaase/js-typewriter/master/example3-typewriter/index.html -->
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>MeisterWriter</title>
+ <link href="https://fonts.fontself.com/zjwllZa/meisterwriter-regular.css" rel="stylesheet">
+ <style>        body {
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  line-height: 1.2;
+ }
+
+ textarea, body {
+  font-family: MeisterWriter, 'meisterwriter-regular', monospace;
+ }
+
+ #typewriter {
+  white-space: pre;
+ }
+ </style>
+ <script src="./index_files/jquery-1.10.1.min.js"></script>
+ <script src="./index_files/typewriter.js"></script>
+ <script src="./index_files/howler.min.js"></script>
+</head>
+<body style="">
+<p style="font:16px sans-serif;">INFO: <strong><</strong> bewegt den theoretischen cursor nach links und überschreibt, <strong>></strong> löscht den letzten Buchstaben und <strong>_</strong> wartet einen Buchstaben lang</p>
+<textarea id="input" name="input" id="" cols="100" rows="10" style="margin: 0px;width: 465px;height: 90px;"></textarea>
+<p style="font:16px sans-serif;">(Load Sound MUSS AM ANFANG GEDRÜCKT WERDEN)</p>
+<button id="load">Load Sound</button>
+<button id="playButton">Play</button>
+<button onclick="typewriter.stop()">Stop</button>
+<button onclick="$('#typewriter').text('');typewriter.stop()">Delete (not the Input)</button>
+
+<p style="margin: 100px;line-height: 1.6;" id="typewriter"></p>
+
+<script>
+    // Audio files are royalty-free from http://www.soundjay.com/typewriter-sounds.html.
+
+    var howl, poem, typewriter;
+
+    $('#load').click(function () {
+        howl = new Howl({
+            src: [
+                "output.ogg",
+                "output.m4a",
+                "output.mp3",
+                "output.ac3"
+            ],
+            sprite: {
+                taste1: [0, 408],
+                taste2: [2000, 408],
+                taste3: [4000, 384],
+                taste4: [6000, 456],
+                taste5: [8000, 408],
+                leertaste1: [10000, 432],
+                return: [12000, 1392],
+                endline: [15000, 1200]
+            },
+            preload: true,
+            ctx: true,
+            autoSuspend: false
+        });
+    });
+
+    function animate(typewriter) {
+        sequence = [];
+
+        for (var i in poem) {
+            sequence.push({
+                text: poem[i],
+                delayAfter: 1000,
+            });
+        }
+
+        typewriter.playSequence(sequence);
+    }
+
+    $('#playButton').click(function () {
+        poem = $('#input').val().split(/(?<=\r?\n)/);
+
+        function playSound(character, nextCharacter, lastCharacter) {
+
+            if (character === "\n") {
+                howl.play('return');
+            } else if (character === "<" || character === '>') {
+                howl.play('leertaste1');
+            } else if (character === " ") {
+                howl.play('leertaste1');
+            } else if (character === "_") {
+            } else {
+                if (nextCharacter === "\n") {
+                    howl.play('endline');
+                } else {
+                    howl.play('taste' + Math.ceil(Math.random() * 5));
+                }
+            }
+        }
+
+        typewriter = new Typewriter($("#typewriter"));
+
+        typewriter.setCaret("");
+        typewriter.setCaretPeriod(0);
+        typewriter.setDelay(80, 50);
+        typewriter.setCharacterCallbackPre(playSound);
+        animate(typewriter);
+    });
+</script>
+
+
+</body>
+</html>

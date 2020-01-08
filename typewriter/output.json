@@ -1,0 +1,42 @@
+{
+  "src": [
+    "output.ogg",
+    "output.m4a",
+    "output.mp3",
+    "output.ac3"
+  ],
+  "sprite": {
+    "taste1": [
+      0,
+      408
+    ],
+    "taste2": [
+      2000,
+      408
+    ],
+    "taste3": [
+      4000,
+      384
+    ],
+    "taste4": [
+      6000,
+      456
+    ],
+    "taste5": [
+      8000,
+      408
+    ],
+    "leertaste1": [
+      10000,
+      432
+    ],
+    "return": [
+      12000,
+      1392
+    ],
+    "endline": [
+      15000,
+      1200
+    ]
+  }
+}
