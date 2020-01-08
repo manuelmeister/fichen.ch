@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Zum Anlass des 30. Jahrestag der Fichenaffäre bildet dieses dunkle Kapitel
+      der Schweizer Geschichte den Kern des Projektes. Das Ergebnis umfasst eine dreiteilige
+      Web-Dokumentation, digitale Webpräsenz und eine finale Prämien-Veranstaltung, welche nicht nur
+      die historischen Details offen legt sondern auch zur Reflexion über die heutige Situation
+      anregen soll.">
+ <title>Die Fichen-Affäre</title>
+ <link rel="stylesheet" href="assets/css/style.2.css">
+ <style>
+  #eyes {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   z-index: -1;
+   pointer-events: none;
+  }
+
+  .section--splash {
+   background: #242425;
+   color: #FFFEF5;
+   position: relative;
+   padding: 1px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   z-index: -10;
+   font-size: 15px;
+  }
+  @media (min-width: 576px) {
+   .section--splash {
+    font-size: 24px;
+   }
+  }
+  .section--splash .logo {
+   height: 150px;
+   max-width: 100%;
+   fill: currentColor;
+  }
+  @media (min-width: 576px) {
+   .section--splash .logo {
+    height: 270px;
+   }
+  }
+  .section--splash .typewriter {
+   line-height: 1.42;
+   margin: 40px 0;
+  }
+  @media (min-width: 576px) {
+   .section--splash .typewriter {
+    margin: 70px 0;
+   }
+  }
+
+  .button {
+   padding: 10px 15px;
+   background: #E37A39;
+   color: #FFFEF5;
+   border: none;
+   font-size: 18px;
+  }
+  @media (min-width: 576px) {
+   .button {
+    padding: 15px 22px;
+    font-size: 24px;
+   }
+  }
+ </style>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129717238-2"></script>
+ <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-129717238-2');
+ </script>
+</head>
+<body>
+<div id="fullpage">
+ <header class="section section--splash fp-noscroll" data-anchor="splash">
+  <canvas width="1000" height="1000" id="eyes"></canvas>
+  <h1>
+   <svg class="logo">
+    <title>Die Fichen-Affäre</title>
+    <use xlink:href="assets/fichen.min.svg#icon-logo"/>
+   </svg>
+  </h1>
+  <blockquote class="typewriter">Vor 30 Jahren ist die Fichenaffäre aufgeflogen. <br> Über 900'000
+   Menschen wurden überwacht. <br>Wie konnte das passieren?
+  </blockquote>
+  <button class="button" onclick="showTrailer()">
+   TRAILER
+  </button>
+  <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
+      src="assets/img/right.svg" alt="Nächste Seite">
+  </button>
+ </header>
+ <section class="section section--trailer fp-noscroll" data-anchor="trailer">
+  <div class="trailer">
+   <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img data-src="assets/img/left.svg"
+                                                                     alt="Vorherige Seite">
+   </button>
+   <div class="video_wrapper">
+    <div class="video-container">
+     <div class="video placeholder" data-yt="s6Rmmm9Isao" onclick="playVideo(this)"></div>
+    </div>
+   </div>
+   <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
+       data-src="assets/img/right.svg alt=" Nächste Seite"">
+   </button>
+  </div>
+ </section>
+ <section class="section section--episodes" data-anchor="episodes">
+  <div class="slide slide--episode-1" data-anchor="episode1">
+   <article>
+    <header class="video_bg">
+     <div class="video_wrapper">
+      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
+          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      </button>
+      <div class="video-container">
+       <div class="video placeholder" data-yt="S2T-GHRJheI" onclick="playVideo(this)"></div>
+      </div>
+     </div>
+    </header>
+    <h2>Episode 1</h2>
+    <section class="episode_content">
+     <div class="episode_text">
+      <h3>Landes<br>streik</h3>
+      <p>Der Landesstreik war ein Generalstreik in der Schweiz, der vom 12. bis 14. November 1918
+       dauerte. Rund 250'000 Arbeiter und Gewerkschafter nahmen teil.<br>
+       <audio data-src="assets/audio/Episode%201/Landesstreik%20Audio.mp3" controls>
+        Your browser does not support the <code>audio</code> element.
+       </audio>
+       <small>Prof. Dr. Brigitte Studer zum Landesstreik</small>
+      </p>
+      <figure>
+       <img data-src="assets/img/1372%201.jpg" align="right" alt="">
+       <figcaption>
+        Generalstreik 1918
+       </figcaption>
+      </figure>
+      <h3>Schutz vor <br>Umsturz</h3>
+      <p class="smallp">
+       Der Schweizerische Vaterländische Verband (SVV) entstand im April 1919 als Zusammenschluss
+       von während des Landesstreiks gebildeten paramilitärischen Bürgerwehren und anderen
+       konservativ-militärischen Bünden. Er war ein privater, rechtsbürgerlicher Verein mit dem
+       Ziel, die verfassungsmässige Sicherheit, Ruhe und Ordnung zu bewahren und einen
+       sozialistischen Umsturzes abzuwenden. </p>
+      <p class="smallp"> Der SVV vertrat eine restriktive Ausländer- und Asylpolitik. Er versuchte
+       die Wahl von Sozialdemokraten in wichtige Ämter zu verhindern und distanzierte sich
+       grundsätzlich nicht von rechtsradikalen Strömungen im Ausland. </p>
+      <p class="smallp last">Weil die Verbandsleitung Polizeibeamte bestochen hatte, wurde der SVV
+       1948 auf nationaler Ebene aufgelöst. Einige Sektionen existierten aber weiterhin auf
+       kantonaler Ebene.
+      </p>
+      <h3>KOMMUNISMUS IN DER SCHWEIZ</h3>
+      <p class="smallp">Kommunismus ist eine politische Bewegung und eine Weltanschauung. Kern der
+       Ideologie ist der Aufbau einer herrschaftsfreien, klassenlosen Gesellschaft und sozialer
+       Gleichheit ohne Privateigentum.</p>
+      <p class="smallp last"> Die Kommunistische Partei der Schweiz wurde 1921 gegründet. Die KPS
+       war Mitglied der Kommunistischen Internationale, einem internationalen Zusammenschluss
+       kommunistischer Parteien, gegründet in Moskau. So geriet sie unter den Einfluss der
+       Sowjetunion. </p>
+      <p> 1940 verbot der Bundesrat der KPS jede Tätigkeit und erklärte sie für aufgelöst. Die
+       kommunistische Partei fusionierte 1943 mit der Sozialistischen Föderation der Schweiz zur
+       Partei der Arbeit (PdA), welche bis heute aktiv ist. <br>
+       <audio data-src="assets/audio/Episode%201/PDA%20Audio.mp3" controls>
+        Your browser does not support the <code>audio</code> element.
+       </audio>
+       <small>Prof. Dr. Brigitte Studer zur PDA</small>
+      </p>
+      <h3>SCHWEIZERISCHE AUFKLÄRUNGSDIENST</h3>
+      <p>1947 wurde der Schweizerische Aufklärungsdienst (SAD) in Zürich gegründet. Finanzielle
+       Unterstützung erhielt er von Bund, Kantonen und Unternehmen. Der Schweizerische
+       Aufklärungsdienst wurde zur bedeutendsten Organisation der antikommunistisch ausgerichteten
+       Geistigen Landesverteidigung. Im Visier standen vor allem die Sowjetunion und das
+       kommunistische Osteuropa , im Innern die Partei der Arbeit, später auch die Neue Linke.
+      </p>
+      <h3>KALTER <br>KRIEG</h3>
+      <p class="smallp">
+       Der Kalte Krieg bezeichnet die spannungsreiche Konfrontation der Siegermächte des Zweiten
+       Weltkriegs nach 1945. Gegner waren die kapitalistischen Westmächte unter der Führung der
+       Vereinigten Staaten und der sogenannte Ostblock unter Führung der kommunistischen
+       Sowjetunion. In der Nachkriegszeit traten die unterschiedlichen Ziele der Supermächte bei der
+       Neuordnung der Welt hervor und führten zur Teilung Europas in zwei feindliche
+       Machtblöcke.</p>
+      <p class="smallp"> Während des Kalten Krieges fühlte die Schweiz sich durch die Sowjetunion
+       bedroht, obwohl sie eine strikte Neutralität zwischen den Blöcken praktizierte.
+       Wirtschaftlich, politisch und kulturell fühlte sie sich dem Westen zugehörig.</p>
+      <p class="smallp"> Durch militärische und atomare Aufrüstungen stieg die Angst vor einem
+       “heissen”, wahrhaftigen Krieg. Dieser brach zwar nie in diesem Masse aus, äusserte sich aber
+       in zahlreichen Stellvertreterkriegen im afrikanischen, asiatischen und südamerikanischen
+       Raum.</p>
+      <p class="smallp"> Als die Konfliktführenden mit atomarer Aufrüstung starteten, begann auch
+       die Schweiz mit der Planung einer eigenen Atombombe. Zum Schutz wurden bis heute über 300'000
+       Personenschutzräume und mehr als 5'000 öffentliche Schutzanlagen erbaut. Somit gibt es in der
+       Schweiz im Notfall für mehr als 100% der Bevölkerung einen sicheren Platz. Dies ist in keinem
+       anderen Land der Fall.</p>
+      <p class="smallp last"> Als Ende des Kalten Krieges gilt im Allgemeinen 1991 mit dem
+       Zusammenbruch der Sowjetunion.
+      </p>
+      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode</button>
+     </div>
+    </section>
+    <div class="episode_people_wrapper">
+     <section class="episode_people">
+      <div class="peoples">
+       <div class="people"><img data-src="assets/img/Still_BrigitteStuder%201.jpg"
+                                alt="Profilbild Prof. Dr. Brigitte Studer">
+        <h4>Prof. Dr. Brigitte Studer</h4>
+        <p>Prof. Dr. Studer ist Professorin für Schweizer und Neueste Allgemeine Geschichte an der
+         Universität Bern. Durch ihre Aufarbeitung der Geschichte der schweizerischen
+         Kommunistischen Partei und der Komintern gilt sie als Kommunismus-Expertin.</p>
+       </div>
+       <div class="people"><img data-src="assets/img/4b3a205b-22e5-4b61-aa26-92f1541c1f20%201.jpg"
+                                alt="Profilbild Hans Naef">
+        <h4>Hans Naef</h4>
+        <p>Hans Naef kennt als langjähriger Präsident der FDP Uzwil und ehemaliger Kantonsrat die
+         Gründe dafür, wieso die Politische Rechte dem Schweizer Volk misstraute. Durch seinen Beruf
+         in der Personalabteilung bei Bühler AG und als Oberst bei der Schweizer Armee machte er
+         Bekanntschaft mit Ernst Cincera und dessen Ideologien.</p>
+       </div>
+       <div class="people"><img data-src="assets/img/csm_scherr_niggi_header_ed74af2e6c%201.jpg"
+                                alt="Profilbild Niklaus Scherr">
+        <h4>Niklaus Scherr</h4>
+        <p>Niklaus Scherr ist ein Politiker der Alternativen Liste (AL). In seiner Zeit als
+         Journalist und politisch aktivem Linken schaffte er es in den 1970er Jahren auf die Liste
+         der schweizer Staatsfeinde.
+        </p>
+        <p>Als Verfasser des PUK-Berichts „Politische Polizei in der Stadt Zürich“, setzte er sich
+         intensiv mit dem Fichenskandal in Zürich auseinander.
+        </p>
+       </div>
+      </div>
+     </section>
+    </div>
+
+    <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
+        data-src="assets/img/right.svg" alt="Nächste Seite">
+    </button>
+   </article>
+  </div>
+  <div class="slide slide--episode-2" data-anchor="episode2">
+   <article>
+    <header class="video_bg">
+     <div class="video_wrapper">
+      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
+          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      </button>
+      <div class="video-container">
+       <div class="video placeholder" data-yt="Xhl6Dq6HOl0" onclick="playVideo(this)"></div>
+      </div>
+     </div>
+    </header>
+    <h2>Episode 2</h2>
+    <section class="episode_content">
+     <div class="episode_text">
+      <h3>ERNST <br>CINCERA</h3>
+      <p>Ernst Cincera war ein FDP Politiker, der in den 1970er Jahren ein eigenes Spitzelnetz in
+       Bern und Zürich aufgebaut hatte. Ihm war jeder, der politisch Links war, suspekt. Seine
+       Informanten waren überwiegend Studenten und (minderjährige) GymnasiastInnen, die in ihrer
+       Freizeit linksorientierte Parteien und Organisationen infiltrierten. Sie überlieferten
+       Cincera die Namen der Beteiligten, Daten für weitere Treffen, Reisen und andere
+       Aktionen. </p>
+      <figure>
+       <img data-src="assets/img/Com_LC1500-0852-001%201.jpg" align="right" alt="Ernst Cincera">
+       <figcaption>Ernst Cincera</figcaption>
+      </figure>
+      <p>1972 gründete Ernst Cincera die “Informationsgruppe Schweiz” deren Mitglieder aus
+       Interessenten der Wirtschaft, Politik und Verwaltung bestanden. Diesen wurden alle
+       Informationen, die Cinceras “Spitzel” zusammengetragen hatten, zur Verfügung gestellt. So
+       wollte Cincera verhindern, dass “gefährliche” Stellenbewerber ein Job bekamen. So
+       beeinträchtigte er die berufliche Laufbahn vieler Menschen. 1977 drangen Mitglieder des
+       «Demokratischen Manifests» in die Räumlichkeiten von Ernst Cincera ein und klauten Akten von
+       rund 3500 Privatpersonen, die sie später veröffentlichten. Die schweizer Medien berichteten
+       noch Wochen später von der “Cincera-Affäre”, während Cincera seine Tätigkeiten trotz
+       drückender Beweislast verleugnete. </p>
+      <h3>KOPP <br>AFFÄRE</h3>
+      <p>Am 31. Januar 1989 wird eine parlamentarische Untersuchungskommission (PUK) beauftragt, dem
+       Vorwurf der Amtsgeheimnisverletzung nachzugehen, nachdem Justizministerin Elisabeth Kopp ein
+       verdächtiges Gespräch mit ihrem Mann geführte hatte. Kopp wollte ihren Mann vor der
+       Strafuntersuchung seiner Firma warnen, bei der er Vize-Verwaltungspräsident war. Die
+       Untersuchung des Ministeriums und der Geheimdienste führte dazu, dass unzählige Akten
+       gefunden wurden.</p>
+      <h3>PUK <br>BERICHT</h3>
+      <p>Am 22. November 1989 offenbarte der 228-seitige Bericht über die «Vorkommnisse im
+       Eidgenössischen Justiz- und Polizeidepartement» der PUK das Ausmass ihres Fundes. Die
+       Schnüffelpolizei hatte 900'000 Karteikarten, die sogenannten Fichen, und dazugehörige
+       Dossiers über Personen und Organisationen, geführt. Diese Akten wurden an ausländische
+       Geheimdienste, an andere Amtsstellen und an Arbeitgeber weitergeben.</p>
+      <h3>SPITZEL UND <br>FICHIERTE</h3>
+      <p>Zu Beginn wurden hauptsächlich LinksaktivistInnen überwacht, später folgten unter anderem
+       AusländerInnen, GewerkschaftlerInnen, SchriftstellerInnen, FemministInnen,
+       Jura-SeperatistInnen und Menschenrechtsvereinigungen wie z.B. Amnesty International. Diese
+       Akten wurden an ausländische Geheimdienste, an andere Amtsstellen und an Arbeitgeber
+       weitergegeben. Einen Einblick in die Hirarchie der Bundespolizei gibt Niklaus Scherr: <br>
+       <audio data-src="assets/audio/Episode%202/Hirarchie-BUPO.wav" controls>
+        Your browser does not support the <code>audio</code> element.
+       </audio>
+       <small>Niklaus Scherr zur Hierarchie der BUPO</small>
+      </p>
+      <h3>RON <br>GANZFRIED</h3>
+      <p>Ron Ganzfried war in seiner Jugend für kurze Zeit ein Spitzel für Ernst Cincera in der
+       Stadt Bern. Jedoch merkte er bereits knapp ein Jahr später, dass das was er tat nicht richtig
+       war und die “kommunistischen Linken” recht hatten. So wechselte er die Seite, setzte sich
+       politisch ein und wurde dann schlussendlich selber überwacht. Seine Spitzeltätigkeiten wurden
+       nicht aufgedeckt. Erst als Cincera aufflog und abstritt, Ron und seine Kollegen als Spitzel
+       angeheuert gehabt zu haben, wollte Ron reinen Tisch machen. Er ging mit seiner Geschichte an
+       die Öffentlichkeit. Wie dies genau ablief, ist hier zu hören:<br>
+       <audio data-src="assets/audio/Episode%202/Cincera%20fliegt%20auf.wav" controls>
+        Your browser does not support the <code>audio</code> element.
+       </audio>
+       <small>Ron Ganzfried zum Cinceraskandal</small>
+      </p>
+      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode</button>
+     </div>
+    </section>
+    <div class="episode_people_wrapper">
+     <section class="episode_people">
+      <div class="peoples">
+       <div class="people"><img data-src="assets/img/Ron2%201.jpg" alt="Profilbild Ron Ganzfried">
+        <h4>Ron Ganzfried</h4>
+        <p>Ron Ganzfried war in seiner Jugend für kurze Zeit ein Spitzel für Ernst Cincera in der
+         Stadt Bern. Er wechselte jedoch die Seite, setzte sich politisch ein und wurde dann
+         schlussendlich selber überwacht.</p>
+       </div>
+       <div class="people"><img data-src="assets/img/Berthoud-2%201.jpg"
+                                alt="Profilbild Jean-Michel Berthoud">
+        <h4>Jean-Michel Berthoud</h4>
+        <p>Jean-Michel Berthoud ist ein Redaktor/Journalist in Zürich. Weil er sich
+         “unschweizerisch” verhielt und sich linkspolitisch engagierte, wurde er in den 1970er- und
+         1980er-Jahren vierzehn Jahre lang fichiert und überwacht.</p>
+       </div>
+       <div class="people"><img
+           data-src="assets/img/moritz-leuenberger-9-c-moritz-leuenberger%201.jpg"
+           alt="Profilbild Moritz Leuenberger">
+        <h4>Moritz Leuenberger</h4>
+        <p>Moritz Leuenberger, Ex-Bundesrat und ehemaliger PUK Präsident, leitete die
+         Untersuchungskomission des Bundes in der Fichenaffäre und war in erster Front dabei, als es
+         um um die Aufdeckung des Ausmasses der staatlichen Überwachung ging.
+        </p>
+       </div>
+      </div>
+     </section>
+     <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
+         data-src="assets/img/right.svg" alt="Nächste Seite">
+     </button>
+    </div>
+   </article>
+  </div>
+  <div class="slide slide--episode-3" data-anchor="episode3">
+   <article>
+    <header class="video_bg">
+
+     <div class="video_wrapper">
+      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
+          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      </button>
+      <div class="video-container">
+       <div class="video placeholder" data-yt="pPinZr4knZY" onclick="playVideo(this)"></div>
+      </div>
+     </div>
+    </header>
+    <h2>Episode 3</h2>
+    <section class="episode_content">
+     <div class="episode_text">
+      <h3>REAKTION AUF DEN FICHEN SKANDAL</h3>
+      <p>Der Fichenskandal löste eine riesen Empörung aus. Insgesamt 300'000 Bürgerinnen und Bürger
+       stellten Anträge zur Einsicht in ihre Fichen. Mit diesem Ausmass an Gesuchen war der Staat
+       regelrecht überfordert. Der Bundesrat reagierte schnell und wollte die Dossiers und Akten
+       weitgehend zerstören.</p>
+      <blockquote>
+       <p>Der Staatsschutz und die politische Polizei haben eigentlich ohne gesetzliche Grundlage
+        gearbeitet und das geht in unserem Land eigentlich gar nicht.</p>
+       <cite>Catherine Weber</cite>
+      </blockquote>
+      <h3>SCHLUSS MIT DEM SCHNÜFFEL STAAT</h3>
+      <figure>
+       <img data-src="assets/img/grundrechtsaktivistin-catherine-weber%201.png" align="right"
+            alt="Gruppe von Leuten">
+       <figcaption>Catherine Weber (m.) im Komitee «Schluss mit dem Schnüffelstaat» mit dem «Fichen
+        Fritz» in der Hand. <br><span style="opacity: .5;">(Archivbild: Keystone)</span>
+       </figcaption>
+      </figure>
+      <p class="smallp">Im Januar 1990 wurde das Komittee «Schluss mit dem Schnüffelstaat»
+       gegründet, um einerseits die Zerstörung der Akten zu verhindern und um andererseits eine
+       Kundgebung vor dem Bundesrat zu ermöglichen. Die Komitee-Zeitung «Fichen Fritz» wurde in
+       einer Auflage von 300'000 Stück in der ganzen Schweiz verteilt. Sowohl der Fichen Fritz als
+       auch der Blick druckten Muster-Einsichtsbriefe in ihren Ausgaben ab. </p>
+      <p class="smallp last">Am 3. März 1990 demonstrierten 35'000 Personen in Bern. Sie forderten
+       die Abschaffung der Schnüffelpolizei, die Herausgabe aller Akten, sowie die Einsetzung einer
+       zweiten PUK. Der Fichenskandal löste eine riesen Empörung aus. Insgesamt 300'000 Bürgerinnen
+       und Bürger stellten Anträge zur Einsicht in ihre Fichen. Mit diesem Ausmass war der Staat
+       regelrecht überfordert. Der Bundesrat reagierte schnell und wollte die Dossiers und Akten
+       weitgehend zerstören.</p>
+      <h3>«S.O.S – SCHWEIZ OHNE SCHNÜFFEL POLIZEI»</h3>
+      <p>Kurz darauf führte das Komitee die Unterschriftensammlung für die Volksinitiative «S.o.S –
+       Schweiz ohne Schnüffelpolizei» ein. Jedoch verzögerte das Parlament die Abstimmung der
+       Initiative bis 1998. <br>Am 7. Juni wurde die Volksinitiative mit 75.4% der Stimmen
+       abgelehnt. Ein Grund dafür war das Gesetz von 1997, das «Bundesgesetz über Massnahmen zur
+       Wahrung der inneren Sicherheit». Es besagt, dass der Staatsschutz nur richtige und für ihn
+       relevante Informationen bearbeiten darf und dass diese Informationen regelmässig überprüft
+       werden müssen. Das bedeutet, dass er weiterhin politische Tätigkeiten überwachen und
+       fichieren darf, sollte ein Verdacht auf Grundrechts-Missbrauch bestehen. Den Staatsschutz
+       komplett abzuschaffen wäre für viele eine zu radikale Entscheidung gewesen und so entschied
+       sich die Schweizer Bevölkerung gegen die Volksinitiative.</p>
+      <h3>DER STAAT FICHIERT WEITER</h3>
+      <p>2010 kam es zu einem neuen Skandal. Es wurden etwa 200'000 Akten von Personen aufgefunden,
+       die unrechtmässig angelegt wurden sind und rechtlichen Bestimmungen nicht einhielten. Es
+       waren hauptsächlich AusländerInnen, die gegen das Gesetz verstossen hatten und in den Augen
+       des Staatschutzes eine “Gefahr” darstellten. Vergleicht man das Ausmass der Empörung von
+       früher mit 2010, viel sie gering aus. Trotz diesem Vorfall stimmten die Schweizer Volk am 25.
+       September 2016 mit 65% der Mehrheit in einer Referendums-Abstimmung für das neue
+       Nachrichtendienstgesetz. Dieses befugt dem Nachrichtendienst, dass er ab sofort legal Handys,
+       Computer und die Internetkommunikation überwachen darf.</p>
+      <h3>2019</h3>
+      <p>Margareta Kiener Nellen, ehemalige SP Nationalrätin, verlangte im Mai 2019 Einsicht in ihre
+       Akte. Was sie für Ergebnisse fand, hört man hier: <br>
+       <audio data-src="assets/audio/Episode%203/AktenEinsicht_KienerNellen.mp3"
+              controls>
+        Your browser does not support the <code>audio</code> element.
+       </audio>
+       <small>Margareta Kiener Nellen</small>
+      </p>
+      <blockquote>
+       <p>Die Gefahr, dass sich die Fichenaffäre wiederholt, haben wir bereits.<br>(…) das Ausmass
+        wissen wir nicht genau.</p>
+       <cite>Margareta Kiener Nellen</cite>
+      </blockquote>
+     </div>
+    </section>
+    <div class="episode_people_wrapper">
+     <section class="episode_people">
+      <div class="peoples">
+       <div class="people"><img
+           data-src="assets/img/Bildschirmfoto%202019-12-26%20um%2012.48%201.jpg"
+           alt="Profilfoto Hans Peter Thür">
+        <h4>Hanspether Thür</h4>
+        <p>Hanspether Thür ist Jurist und Politiker. Er war Mitglied der Parlamentarischen Unter&shy;suchungs&shy;kommission
+         PUK und Partei&shy;präsident der Grünen Fraktion von 1991-1994.</p>
+        <p>Später wurde er zum eidgenössichen Daten&shy;schutz- und Öffentlichkeitsbeauftragten
+         benannt.
+        </p>
+       </div>
+       <div class="people"><img data-src="assets/img/portrait_catherine3%201.jpg"
+                                alt="Profilfoto Catherine Weber">
+        <h4>Catherine Weber</h4>
+        <p>Catherine Weber war Sekretärin des Komitees “Schluss mit dem Schnüffelstaat”, welcher ab
+         1990 die politische Aufarbeitung des Fichenskandals in Angriff nahm. Seit 2006 ist Weber
+         Geschäftsführerin des Vereins Grundrechte Schweiz. </p>
+       </div>
+       <div class="people"><img data-src="assets/img/Margret_Kiener_Nellen_(2007)%201.png"
+                                alt="Profilfoto Margareta Kiener Nellen">
+        <h4>Margareta Kiener Nellen</h4>
+        <p>Kiener Nellen ist ehemalige SP Nationalrätin und Präsidentin der ständigen Menschen&shy;rechtskommission
+         der OSZE.</p>
+        <p>Sie stellten im Mai 2019 einen Antrag zur Einsicht in ihre Fichen und musste feststellen,
+         dass ihr Name mit 70 Einträgen in der Datenbank des NDB vermerkt war.
+        </p>
+       </div>
+      </div>
+     </section>
+    </div>
+    <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img data-src="assets/img/right.svg"
+                                                                        alt="Nächste Seite">
+    </button>
+   </article>
+  </div>
+ </section>
+ <div class="section section--about" data-anchor="about">
+  <div class="grow">
+   <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img style="width: auto;"
+                                                                     data-src="assets/img/left.svg"
+                                                                     alt="Vorherige Seite">
+   </button>
+   <img data-src="assets/img/Tisch_close_frontal%203.jpg" class="sm-down" alt="Telefon und Bücher"> <img
+      alt="Telefon und Bücher"
+      data-src="assets/img/Tisch_close_frontal%202.jpg" class="sm">
+   <article>
+    <h3>Das Projekt</h3>
+    <p>Im Rahmen eines Bachelor-Modules sollte ein audiovisuelles Format mit crossmedialem Ansatz
+     produziert werden. Zum Anlass des 30. Jahrestag der Fichenaffäre bildet dieses dunkle Kapitel
+     der Schweizer Geschichte den Kern des Projektes. Das Ergebnis umfasst eine dreiteilige
+     Web-Dokumentation, digitale Webpräsenz und eine finale Prämien-Veranstaltung, welche nicht nur
+     die historischen Details offen legt sondern auch zur Reflexion über die heutige Situation
+     anregen soll.</p>
+   </article>
+   <footer class="footer">
+    <div>
+     <h5>ÜBER UNS</h5>
+     <p>Wir sind eine Gruppe von Bachelor Studiereneden des Studiengangs Cast / Audiovisual
+      Media.<br>
+      <a href="https://meister.io">Manuel Meister</a>
+      , Caroline Bless, Aline Piazza, Olga Stuker, Lukas Naef, Sarja Gauch, Yonca Ergen, Noemi
+      Carlen, Jasmine Jacot.
+     </p>
+    </div>
+    <img class="zhdk-logo" src="assets/logo.svg" alt="ZHdK">
+   </footer>
+  </div>
+ </div>
+</div>
+<script src="assets/js/eyes.js"></script>
+<script src="assets/js/scrolloverflow.min.js"></script>
+<script src="assets/js/fullpage.js"></script>
+<script>
+    if (location.hash === '#trailer') {
+        document.querySelector('.section--trailer').style.display = 'block';
+    }
+
+    new fullpage('#fullpage', {
+        scrollingSpeed: 450,
+        transitionLapse: 700,
+        animateAnchor: false,
+        fitToSectionDelay: 100,
+        autoScrolling: true,
+        slidesNavigation: true,
+        controlArrows: true,
+        lazyLoading: true,
+        touchSensitivity: 20,
+        loopHorizontal: false,
+        verticalCentered: false,
+        scrollOverflow: true,
+        scrollOverflowDelay: 70,
+        easingcss3: 'cubic-bezier(0.08, 1, 0.85, 1)'
+    });
+
+    function showTrailer() {
+        document.querySelector('.section--trailer').style.display = 'block';
+        fullpage_api.reBuild();
+        setTimeout(function () {
+            fullpage_api.moveTo('trailer')
+        }, 5);
+    }
+
+    function playVideo(elem) {
+        let id = elem.getAttribute('data-yt');
+        elem.parentElement.innerHTML = '<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+</script>
+</body>
+</html>
