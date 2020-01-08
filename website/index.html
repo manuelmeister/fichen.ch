@@ -35,25 +35,30 @@
    z-index: -10;
    font-size: 15px;
   }
+
   @media (min-width: 576px) {
    .section--splash {
     font-size: 24px;
    }
   }
+
   .section--splash .logo {
    height: 150px;
    max-width: 100%;
    fill: currentColor;
   }
+
   @media (min-width: 576px) {
    .section--splash .logo {
     height: 270px;
    }
   }
+
   .section--splash .typewriter {
    line-height: 1.42;
    margin: 40px 0;
   }
+
   @media (min-width: 576px) {
    .section--splash .typewriter {
     margin: 70px 0;
@@ -66,7 +71,10 @@
    color: #FFFEF5;
    border: none;
    font-size: 18px;
+   float: right;
+   display: flex;
   }
+
   @media (min-width: 576px) {
    .button {
     padding: 15px 22px;
@@ -78,7 +86,11 @@
  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129717238-2"></script>
  <script>
      window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
+
+     function gtag() {
+         dataLayer.push(arguments);
+     }
+
      gtag('js', new Date());
 
      gtag('config', 'UA-129717238-2');
@@ -100,22 +112,30 @@
   <button class="button" onclick="showTrailer()">
    TRAILER
   </button>
-  <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
-      src="assets/img/right.svg" alt="Nächste Seite">
+  <button class="arrow down" onclick="fullpage_api.moveSectionDown()">
+   <div class="btnwrapper">
+    <span>Episoden</span><img src="assets/img/right.svg" alt="Nächste Seite">
+   </div>
   </button>
  </header>
  <section class="section section--trailer fp-noscroll" data-anchor="trailer">
   <div class="trailer">
-   <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img data-src="assets/img/left.svg"
-                                                                     alt="Vorherige Seite">
+   <button class="arrow up" onclick="fullpage_api.moveSectionUp()">
+    <div class="btnwrapper">
+     <img data-src="assets/img/left.svg" alt="Vorherige Seite"><span>Startseite</span>
+    </div>
    </button>
    <div class="video_wrapper">
+    <div class="h2wrapper">
+     <h2>Trailer</h2></div>
     <div class="video-container">
      <div class="video placeholder" data-yt="s6Rmmm9Isao" onclick="playVideo(this)"></div>
     </div>
    </div>
-   <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
-       data-src="assets/img/right.svg alt=" Nächste Seite"">
+   <button class="arrow down" onclick="fullpage_api.moveSectionDown()">
+    <div class="btnwrapper">
+     <img data-src="assets/img/right.svg" alt="Nächste Seite"> <span>Episoden</span>
+    </div>
    </button>
   </div>
  </section>
@@ -124,15 +144,19 @@
    <article>
     <header class="video_bg">
      <div class="video_wrapper">
-      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
-          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      <button class="arrow up" onclick="fullpage_api.moveSectionUp()">
+       <div class="btnwrapper">
+        <img data-src="assets/img/left.svg" alt="Vorherige Seite"><span>Zurück</span>
+       </div>
       </button>
       <div class="video-container">
        <div class="video placeholder" data-yt="S2T-GHRJheI" onclick="playVideo(this)"></div>
       </div>
      </div>
     </header>
-    <h2>Episode 1</h2>
+    <div class="h2wrapper">
+     <h2>Episode 1</h2>
+    </div>
     <section class="episode_content">
      <div class="episode_text">
       <h3>Landes<br>streik</h3>
@@ -209,22 +233,30 @@
       <p class="smallp last"> Als Ende des Kalten Krieges gilt im Allgemeinen 1991 mit dem
        Zusammenbruch der Sowjetunion.
       </p>
-      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode</button>
+      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode <img
+          src="assets/img/right.svg"
+          alt="ansehen"></button>
      </div>
+     <br>
+     <button class="arrow down" onclick="fullpage_api.moveSectionDown()">
+      <div class="btnwrapper">
+       <span>Projekt</span> <img data-src="assets/img/right.svg" alt="Nächste Seite"></div>
+     </button>
     </section>
     <div class="episode_people_wrapper">
      <section class="episode_people">
+      <h3>Protagonisten</h3>
       <div class="peoples">
        <div class="people"><img data-src="assets/img/Still_BrigitteStuder%201.jpg"
                                 alt="Profilbild Prof. Dr. Brigitte Studer">
-        <h4>Prof. Dr. Brigitte Studer</h4>
+        <h4>Prof. Dr. <br>Brigitte Studer</h4>
         <p>Prof. Dr. Studer ist Professorin für Schweizer und Neueste Allgemeine Geschichte an der
          Universität Bern. Durch ihre Aufarbeitung der Geschichte der schweizerischen
          Kommunistischen Partei und der Komintern gilt sie als Kommunismus-Expertin.</p>
        </div>
        <div class="people"><img data-src="assets/img/4b3a205b-22e5-4b61-aa26-92f1541c1f20%201.jpg"
                                 alt="Profilbild Hans Naef">
-        <h4>Hans Naef</h4>
+        <h4>Hans <br>Naef</h4>
         <p>Hans Naef kennt als langjähriger Präsident der FDP Uzwil und ehemaliger Kantonsrat die
          Gründe dafür, wieso die Politische Rechte dem Schweizer Volk misstraute. Durch seinen Beruf
          in der Personalabteilung bei Bühler AG und als Oberst bei der Schweizer Armee machte er
@@ -232,7 +264,7 @@
        </div>
        <div class="people"><img data-src="assets/img/csm_scherr_niggi_header_ed74af2e6c%201.jpg"
                                 alt="Profilbild Niklaus Scherr">
-        <h4>Niklaus Scherr</h4>
+        <h4>Niklaus <br>Scherr</h4>
         <p>Niklaus Scherr ist ein Politiker der Alternativen Liste (AL). In seiner Zeit als
          Journalist und politisch aktivem Linken schaffte er es in den 1970er Jahren auf die Liste
          der schweizer Staatsfeinde.
@@ -244,25 +276,24 @@
       </div>
      </section>
     </div>
-
-    <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
-        data-src="assets/img/right.svg" alt="Nächste Seite">
-    </button>
    </article>
   </div>
   <div class="slide slide--episode-2" data-anchor="episode2">
    <article>
     <header class="video_bg">
      <div class="video_wrapper">
-      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
-          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      <button class="arrow up" onclick="fullpage_api.moveSectionUp()">
+       <div class="btnwrapper">
+        <img data-src="assets/img/left.svg" alt="Vorherige Seite"><span>Zurück</span>
+       </div>
       </button>
       <div class="video-container">
        <div class="video placeholder" data-yt="Xhl6Dq6HOl0" onclick="playVideo(this)"></div>
       </div>
      </div>
     </header>
-    <h2>Episode 2</h2>
+    <div class="h2wrapper">
+     <h2>Episode 2</h2></div>
     <section class="episode_content">
      <div class="episode_text">
       <h3>ERNST <br>CINCERA</h3>
@@ -322,21 +353,29 @@
        </audio>
        <small>Ron Ganzfried zum Cinceraskandal</small>
       </p>
-      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode</button>
+      <button class="button" onclick="fullpage_api.moveSlideRight();">Nächste Episode <img
+          src="assets/img/right.svg"
+          alt="ansehen"></button>
      </div>
+     <br>
+     <button class="arrow down" onclick="fullpage_api.moveSectionDown()">
+      <div class="btnwrapper">
+       <span>Projekt</span> <img data-src="assets/img/right.svg" alt="Nächste Seite"></div>
+     </button>
     </section>
     <div class="episode_people_wrapper">
      <section class="episode_people">
+      <h3>Protagonisten</h3>
       <div class="peoples">
        <div class="people"><img data-src="assets/img/Ron2%201.jpg" alt="Profilbild Ron Ganzfried">
-        <h4>Ron Ganzfried</h4>
+        <h4>Ron <br>Ganzfried</h4>
         <p>Ron Ganzfried war in seiner Jugend für kurze Zeit ein Spitzel für Ernst Cincera in der
          Stadt Bern. Er wechselte jedoch die Seite, setzte sich politisch ein und wurde dann
          schlussendlich selber überwacht.</p>
        </div>
        <div class="people"><img data-src="assets/img/Berthoud-2%201.jpg"
                                 alt="Profilbild Jean-Michel Berthoud">
-        <h4>Jean-Michel Berthoud</h4>
+        <h4>Jean-Michel <br>Berthoud</h4>
         <p>Jean-Michel Berthoud ist ein Redaktor/Journalist in Zürich. Weil er sich
          “unschweizerisch” verhielt und sich linkspolitisch engagierte, wurde er in den 1970er- und
          1980er-Jahren vierzehn Jahre lang fichiert und überwacht.</p>
@@ -344,7 +383,7 @@
        <div class="people"><img
            data-src="assets/img/moritz-leuenberger-9-c-moritz-leuenberger%201.jpg"
            alt="Profilbild Moritz Leuenberger">
-        <h4>Moritz Leuenberger</h4>
+        <h4>Moritz <br>Leuenberger</h4>
         <p>Moritz Leuenberger, Ex-Bundesrat und ehemaliger PUK Präsident, leitete die
          Untersuchungskomission des Bundes in der Fichenaffäre und war in erster Front dabei, als es
          um um die Aufdeckung des Ausmasses der staatlichen Überwachung ging.
@@ -352,9 +391,6 @@
        </div>
       </div>
      </section>
-     <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img
-         data-src="assets/img/right.svg" alt="Nächste Seite">
-     </button>
     </div>
    </article>
   </div>
@@ -363,15 +399,18 @@
     <header class="video_bg">
 
      <div class="video_wrapper">
-      <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img
-          data-src="assets/img/left.svg" alt="Vorherige Seite">
+      <button class="arrow up" onclick="fullpage_api.moveSectionUp()">
+       <div class="btnwrapper">
+        <img
+            data-src="assets/img/left.svg" alt="Vorherige Seite"><span>Zurück</span></div>
       </button>
       <div class="video-container">
        <div class="video placeholder" data-yt="pPinZr4knZY" onclick="playVideo(this)"></div>
       </div>
      </div>
     </header>
-    <h2>Episode 3</h2>
+    <div class="h2wrapper">
+     <h2>Episode 3</h2></div>
     <section class="episode_content">
      <div class="episode_text">
       <h3>REAKTION AUF DEN FICHEN SKANDAL</h3>
@@ -389,7 +428,7 @@
        <img data-src="assets/img/grundrechtsaktivistin-catherine-weber%201.png" align="right"
             alt="Gruppe von Leuten">
        <figcaption>Catherine Weber (m.) im Komitee «Schluss mit dem Schnüffelstaat» mit dem «Fichen
-        Fritz» in der Hand. <br><span style="opacity: .5;">(Archivbild: Keystone)</span>
+        Fritz» in der Hand. <br><span>(Archivbild: Keystone)</span>
        </figcaption>
       </figure>
       <p class="smallp">Im Januar 1990 wurde das Komittee «Schluss mit dem Schnüffelstaat»
@@ -424,6 +463,11 @@
        Nachrichtendienstgesetz. Dieses befugt dem Nachrichtendienst, dass er ab sofort legal Handys,
        Computer und die Internetkommunikation überwachen darf.</p>
       <h3>2019</h3>
+      <blockquote>
+       <p>Die Gefahr, dass sich die Fichenaffäre wiederholt, haben wir bereits.<br>(…) das Ausmass
+        wissen wir nicht genau.</p>
+       <cite>Margareta Kiener Nellen</cite>
+      </blockquote>
       <p>Margareta Kiener Nellen, ehemalige SP Nationalrätin, verlangte im Mai 2019 Einsicht in ihre
        Akte. Was sie für Ergebnisse fand, hört man hier: <br>
        <audio data-src="assets/audio/Episode%203/AktenEinsicht_KienerNellen.mp3"
@@ -432,37 +476,38 @@
        </audio>
        <small>Margareta Kiener Nellen</small>
       </p>
-      <blockquote>
-       <p>Die Gefahr, dass sich die Fichenaffäre wiederholt, haben wir bereits.<br>(…) das Ausmass
-        wissen wir nicht genau.</p>
-       <cite>Margareta Kiener Nellen</cite>
-      </blockquote>
      </div>
+     <br>
+     <button class="arrow down" onclick="fullpage_api.moveSectionDown()">
+      <div class="btnwrapper">
+       <span>Projekt</span> <img data-src="assets/img/right.svg" alt="Nächste Seite"></div>
+     </button>
     </section>
     <div class="episode_people_wrapper">
      <section class="episode_people">
+      <h3>Protagonisten</h3>
       <div class="peoples">
        <div class="people"><img
            data-src="assets/img/Bildschirmfoto%202019-12-26%20um%2012.48%201.jpg"
            alt="Profilfoto Hans Peter Thür">
-        <h4>Hanspether Thür</h4>
-        <p>Hanspether Thür ist Jurist und Politiker. Er war Mitglied der Parlamentarischen Unter&shy;suchungs&shy;kommission
-         PUK und Partei&shy;präsident der Grünen Fraktion von 1991-1994.</p>
-        <p>Später wurde er zum eidgenössichen Daten&shy;schutz- und Öffentlichkeitsbeauftragten
+        <h4>Hanspether <br>Thür</h4>
+        <p>Hanspether Thür ist Jurist und Politiker. Er war Mitglied der Parlamentarischen Untersuchungskommission
+         PUK und Parteipräsident der Grünen Fraktion von 1991-1994.</p>
+        <p>Später wurde er zum eidgenössichen Datenschutz- und Öffentlichkeitsbeauftragten
          benannt.
         </p>
        </div>
        <div class="people"><img data-src="assets/img/portrait_catherine3%201.jpg"
                                 alt="Profilfoto Catherine Weber">
-        <h4>Catherine Weber</h4>
+        <h4>Catherine <br>Weber</h4>
         <p>Catherine Weber war Sekretärin des Komitees “Schluss mit dem Schnüffelstaat”, welcher ab
          1990 die politische Aufarbeitung des Fichenskandals in Angriff nahm. Seit 2006 ist Weber
          Geschäftsführerin des Vereins Grundrechte Schweiz. </p>
        </div>
        <div class="people"><img data-src="assets/img/Margret_Kiener_Nellen_(2007)%201.png"
                                 alt="Profilfoto Margareta Kiener Nellen">
-        <h4>Margareta Kiener Nellen</h4>
-        <p>Kiener Nellen ist ehemalige SP Nationalrätin und Präsidentin der ständigen Menschen&shy;rechtskommission
+        <h4>Margareta <br>Kiener Nellen</h4>
+        <p>Kiener Nellen ist ehemalige SP Nationalrätin und Präsidentin der ständigen Menschenrechtskommission
          der OSZE.</p>
         <p>Sie stellten im Mai 2019 einen Antrag zur Einsicht in ihre Fichen und musste feststellen,
          dass ihr Name mit 70 Einträgen in der Datenbank des NDB vermerkt war.
@@ -471,38 +516,40 @@
       </div>
      </section>
     </div>
-    <button class="arrow" onclick="fullpage_api.moveSectionDown()"><img data-src="assets/img/right.svg"
-                                                                        alt="Nächste Seite">
-    </button>
    </article>
   </div>
  </section>
  <div class="section section--about" data-anchor="about">
   <div class="grow">
-   <button class="arrow" onclick="fullpage_api.moveSectionUp()"><img style="width: auto;"
-                                                                     data-src="assets/img/left.svg"
-                                                                     alt="Vorherige Seite">
+   <button class="arrow up" onclick="fullpage_api.moveSectionUp()">
+    <div class="btnwrapper">
+     <img style="width: auto;" data-src="assets/img/left.svg"
+          alt="Vorherige Seite"><span>Episoden</span></div>
    </button>
-   <img data-src="assets/img/Tisch_close_frontal%203.jpg" class="sm-down" alt="Telefon und Bücher"> <img
-      alt="Telefon und Bücher"
-      data-src="assets/img/Tisch_close_frontal%202.jpg" class="sm">
+   <img data-src="assets/img/Tisch_close_frontal%203.jpg" class="sm-down" alt="Telefon und Bücher">
+   <img
+       alt="Telefon und Bücher"
+       data-src="assets/img/Tisch_close_frontal%202.jpg" class="sm">
    <article>
     <h3>Das Projekt</h3>
-    <p>Im Rahmen eines Bachelor-Modules sollte ein audiovisuelles Format mit crossmedialem Ansatz
-     produziert werden. Zum Anlass des 30. Jahrestag der Fichenaffäre bildet dieses dunkle Kapitel
-     der Schweizer Geschichte den Kern des Projektes. Das Ergebnis umfasst eine dreiteilige
-     Web-Dokumentation, digitale Webpräsenz und eine finale Prämien-Veranstaltung, welche nicht nur
-     die historischen Details offen legt sondern auch zur Reflexion über die heutige Situation
-     anregen soll.</p>
+    <p>Im Rahmen eines Bachelor-Moduls von
+     <a href="https://cast.zhdk.ch">Cast / Audiovisual Media</a>
+     erhielten wir den Auftrag, ein audiovisuelles Format mit crossmedialem Ansatz zu produzieren.
+     Zum Anlass des 30. Jahrestag der Fichen-Affäre bildet dieses dunkle Kapitel der Schweizer
+     Geschichte den Kern des Projektes. Das Ergebnis umfasst eine dreiteilige Web-Dokumentation,
+     digitale Webpräsenz und ein finales Screening.
+    </p>
+    <p>Die Serie legt nicht nur die historischen Details offen, sondern soll auch zur Reflexion über
+     die heutige Situation anregen.</p>
    </article>
    <footer class="footer">
     <div>
      <h5>ÜBER UNS</h5>
-     <p>Wir sind eine Gruppe von Bachelor Studiereneden des Studiengangs Cast / Audiovisual
-      Media.<br>
-      <a href="https://meister.io">Manuel Meister</a>
-      , Caroline Bless, Aline Piazza, Olga Stuker, Lukas Naef, Sarja Gauch, Yonca Ergen, Noemi
-      Carlen, Jasmine Jacot.
+     <p>Wir sind eine Gruppe von Bachelor Studierende der Studiengangsvertiefung Cast / Audiovisual
+      Media:<br> Caroline Bless, Noemi Carlen, Yonca Ergen, Luca Fanelli, Sarja Gauch, Jasmine
+      Jacot,
+      <a href="https://meister.io" style="cursor: auto">Manuel Meister</a>
+      , Lukas Naef, Aline Piazza & Olga Stuker.
      </p>
     </div>
     <img class="zhdk-logo" src="assets/logo.svg" alt="ZHdK">
